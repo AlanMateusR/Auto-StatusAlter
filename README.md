@@ -51,16 +51,25 @@
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3ppdnB3enc5eWtraWYwM3Z6M3Y1MGZ1OGI2MnNpNmJ6NThhb2F6eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5f0vuxKZvW5DpUHWZz/giphy.gif" alt="GIF de exemplo" width="700" height="400">
 
 <br>
+<br>
 
 - Script encerra webdriver, descarta os clientes que não estão vendendo da planilha e logo em seguida faz as requisições para o CRM procurando por clientes com status em IMPLANTAÇÃO
   
 ![download1](https://imgur.com/ytcrqEy.png)
 
+<br>
+<br>
 
-> Codigo procura pela planilha no diretorio Downloads com um prefixo pré-determinado, é utilizado metodo datetime.now para obter ano, mes, dia, hora minuto e segundo atuais e encontrar a planilha, após isso o arquivo é movido e renomeado para RELATORIO_ESTATISTICA.xlsx
+- Codigo procura pela planilha no diretorio Downloads com um prefixo pré-determinado, é utilizado metodo datetime.now para obter ano, mes, dia, hora minuto e segundo atuais e encontrar a planilha, após isso o arquivo é movido para o diretorio onde se encontra o codigo e renomeado para RELATORIO_ESTATISTICA.xlsx
+
+> Será aplicado as devidas condições para retornar outra planilha contendo somente clientes que tenham vendas totais maiores que zero, o resultado será a geração de outro arquivo nomeado RELATORIO_ESTATISTICA_SAIDA.txt
 
 ![terminal1](https://imgur.com/ExiOU5L.png)
 
+<br>
+<br>
+
+- Efetua-se inicialização do codigo CNPJ_IMPLANTAÇÃO.py que inicializa integração via API com CRM e busca um range de 20 clientes com pedido de venda em implantação, o resultado é armazenado em Implantações.txt. 
 ![terminal2](https://imgur.com/94nji3W.png)
 
 
