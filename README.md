@@ -95,5 +95,8 @@
 
 > Depois da requisição via API 
 ![finalizado](https://imgur.com/czpvFRt.png)
+>
+![interface](https://imgur.com/5joVT0F.png)
+
 
 
