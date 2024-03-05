@@ -8,7 +8,7 @@
  
  * **Escopo:** Empresa disponibiliza serviços de suporte para integração no escopo de TEF (Transferencia eletronica de fundos) e vende a propria VPN e TLS para este fim. 
  * **Problematica:** Colaboradores do suporte técnico da empresa necessitam diariamente verificar uma lista de clientes no CRM com status do pedido de venda em implantação, feito isso é necessario acessar um portal de relatorios de vendas e cruzar informações afim de saber se os determinados clientes que foram implantados estão ou não vendendo com o produto disponibilizado, se estão vendendo é necessario alterar o status do pedido de venda para FINALIZADO no CRM, se não estiver vendendo deve-se manter o pedido em IMPLANTAÇÃO e seguir com a proxima verificação manual.
- * **Descrição:** Script foi elaborado para automatizar todo o procedimento de verificação e alteração de status no CRM com base no resultado do cruzamento de dados, o RPA permanece rodando continuamente em um ambiente reservado da empresa para que inicializa diarimente e remova a necessidade de intervenção manual da equipe de suporte da empresa. Para o projeto foram concedidos acesso ao ambiente Fiserv para verificar relatorio de vendas e ainda as chaves de acesso para integração via API ao   portal GLUO.
+ * **Solução:** Script foi elaborado para automatizar todo o procedimento de verificação e alteração de status no CRM com base no resultado do cruzamento de dados, o RPA permanece rodando continuamente em um ambiente reservado da empresa para que inicializa diarimente e remova a necessidade de intervenção manual da equipe de suporte da empresa. Para o projeto foram concedidos acesso ao ambiente Fiserv para verificar relatorio de vendas e ainda as chaves de acesso para integração via API ao   portal GLUO.
 
   
  * **Autor:** [Alan Mateus Rodrigues]
@@ -17,11 +17,12 @@
 
 <br>
 
- ## Adendo!!
+ ## !!! Adendo !!!
  * **Este código é disponibilizado no GitHub exclusivamente como parte do portfólio de programação do autor.**
 * **O objetivo é demonstrar experiência e habilidades na área de programação.** 
 * **Não é recomendada a reprodução, distribuição ou utilização deste código para qualquer finalidade.**
-  
+
+ >* Links, Senhas, Nomes e dados confidenciais foram censurados e a explicação tecnica do funcionamento do codigo foi resumida.
  >* Para mais informações, entre em contato com o autor em: [alanjrelias@hotmail.com]
 
 <br>
@@ -47,7 +48,7 @@
 
 <br>
 
-- É selecionado as colunas que estarão presentes da planilha exportada 
+- É selecionado as colunas que estarão presentes na planilha exportada 
 <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExa3ppdnB3enc5eWtraWYwM3Z6M3Y1MGZ1OGI2MnNpNmJ6NThhb2F6eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5f0vuxKZvW5DpUHWZz/giphy.gif" alt="GIF de exemplo" width="700" height="400">
 
 <br>
@@ -67,11 +68,22 @@
 ![terminal1](https://imgur.com/ExiOU5L.png)
 
 <br>
-<br>
 
-- Efetua-se inicialização do codigo CNPJ_IMPLANTAÇÃO.py que inicializa integração via API com CRM e busca um range de 20 clientes com pedido de venda em implantação, o resultado é armazenado em Implantações.txt. 
+- Efetua-se inicialização do codigo CNPJ_IMPLANTAÇÃO.py que efetua integração via API com CRM e busca um range de 20 clientes com pedido de venda em implantação, o resultado é armazenado em Implantações.txt. 
 ![terminal2](https://imgur.com/94nji3W.png)
 
+<br>
 
+* Codigo cruza os clientes em implantação com clientes que venderam qualquer valor acima de 0,00 
+> Foi utilizado separação de dados com dataframe e merge.
+> É efetuado cruzamento de datos entre os arquivos Implantaçãos.txt e RELATORIO_ESTATISTICA_SAIDA.txt
+> O resultado do cruzamento é armazenado em cnpjs_finalizados.txt cujo status de todos da lista serão alterados.
+
+![mergedf](https://imgur.com/fkcmqK8.png)
+
+<br>
+
+- Por fim, será enviado requisição de alteração de status do pedido para o CRM fazendo com que todos os clientes que já estão vendendo tenham o status alterado para FINALIZADO.
+![terminal2](https://imgur.com/yNZr0O5.png)
 
 
