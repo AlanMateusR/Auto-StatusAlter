@@ -8,7 +8,7 @@
  
  * **Escopo:** Empresa disponibiliza serviços de suporte para integração no escopo de TEF (Transferencia eletronica de fundos) e vende a propria VPN e TLS para este fim. 
  * **Problematica:** Colaboradores do suporte técnico da empresa necessitam diariamente verificar uma lista de clientes no CRM com status do pedido de venda em implantação, feito isso é necessario acessar um portal de relatorios de vendas e cruzar informações afim de saber se os determinados clientes que foram implantados estão ou não vendendo com o produto disponibilizado, se estão vendendo é necessario alterar o status do pedido de venda para FINALIZADO no CRM, se não estiver vendendo deve-se manter o pedido em IMPLANTAÇÃO e seguir com a proxima verificação manual.
- * **Solução:** Script foi elaborado para automatizar todo o procedimento de verificação e alteração de status no CRM com base no resultado do cruzamento de dados, o RPA permanece rodando continuamente em um ambiente reservado da empresa para que inicializa diarimente e remova a necessidade de intervenção manual da equipe de suporte da empresa. Para o projeto foram concedidos acesso ao ambiente Fiserv para verificar relatorio de vendas e ainda as chaves de acesso para integração via API ao   portal GLUO.
+ * **Solução:** Script foi elaborado para automatizar todo o procedimento de verificação e alteração de status no CRM com base no resultado do cruzamento de dados, o RPA permanece rodando continuamente em um ambiente reservado da empresa para que inicializa diarimente e remova a necessidade de intervenção manual da equipe de suporte da empresa. Para o projeto foram concedidos acesso ao ambiente Fiserv (Sitef - integração TEF) para verificar relatorio de vendas e ainda as chaves de acesso para integração via API ao portal de CRM Gluo (baseado em Vtiger CRM).
 
   
  * **Autor:** [Alan Mateus Rodrigues]
@@ -76,7 +76,9 @@
 
 * Codigo cruza os clientes em implantação com clientes que venderam qualquer valor acima de 0,00 
 > Foi utilizado separação de dados com dataframe e merge.
+> 
 > É efetuado cruzamento de datos entre os arquivos Implantaçãos.txt e RELATORIO_ESTATISTICA_SAIDA.txt
+> 
 > O resultado do cruzamento é armazenado em cnpjs_finalizados.txt cujo status de todos da lista serão alterados.
 
 ![mergedf](https://imgur.com/fkcmqK8.png)
@@ -85,5 +87,13 @@
 
 - Por fim, será enviado requisição de alteração de status do pedido para o CRM fazendo com que todos os clientes que já estão vendendo tenham o status alterado para FINALIZADO.
 ![terminal2](https://imgur.com/yNZr0O5.png)
+
+<br>
+
+> Antes da requisição via API 
+![implantação1](https://imgur.com/2lBnsxI.png)
+
+> Depois da requisição via API 
+![finalizado](https://imgur.com/czpvFRt.png)
 
 
