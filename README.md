@@ -11,9 +11,9 @@
  * **Solução:** Script foi elaborado para automatizar todo o procedimento de verificação e alteração de status no CRM com base no resultado do cruzamento de dados, o RPA permanece rodando continuamente em um ambiente reservado da empresa para que inicializa diarimente e remova a necessidade de intervenção manual da equipe de suporte da empresa. Para o projeto foram concedidos acesso ao ambiente Fiserv (Sitef - integração TEF) para verificar relatorio de vendas e ainda as chaves de acesso para integração via API ao portal de CRM Gluo (baseado em Vtiger CRM).
 
   
- * **Autor:** [Alan Mateus Rodrigues]
- * **Data de Criação:** [10/08/2023]
- * **Empresa:** Tefway Tecnologia LTDA
+ * **Autor:** Alan Mateus Rodrigues
+ * **Data de Criação:** 10/08/2023
+ * **Ramo da empresa:** Tecnologia em meios de pagamento
 
 <br>
 
