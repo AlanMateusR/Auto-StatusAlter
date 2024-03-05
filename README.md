@@ -92,10 +92,11 @@
 
 > Antes da requisição via API 
 ![implantação1](https://imgur.com/2lBnsxI.png)
-
+>
 > Depois da requisição via API 
 ![finalizado](https://imgur.com/czpvFRt.png)
 >
+> Log do portal, interface grafica:
 ![interface](https://imgur.com/5joVT0F.png)
 
 
