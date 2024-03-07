@@ -24,6 +24,7 @@
 
  >* Links, nomes e dados confidenciais foram censurados e a explicação tecnica do funcionamento do codigo foi resumida.
  >* Para mais informações, entre em contato com o autor em: alanmateusr@gmail.com
+ >* www.linkedin.com/in/alan-rodrigues-983822218 
 
 <br>
 
