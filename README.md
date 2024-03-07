@@ -23,7 +23,7 @@
 * **Não é recomendada a reprodução, distribuição ou utilização deste código para qualquer finalidade.**
 
  >* Links, nomes e dados confidenciais foram censurados e a explicação tecnica do funcionamento do codigo foi resumida.
- >* Para mais informações, entre em contato com o autor em: [alanjrelias@hotmail.com]
+ >* Para mais informações, entre em contato com o autor em: alanmateusr@gmail.com
 
 <br>
 
